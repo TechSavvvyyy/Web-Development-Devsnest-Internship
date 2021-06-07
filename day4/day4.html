@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>clock</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            .clock
+            {
+                
+                width:200px;
+                height:200px;
+                background: #00ff;
+                display:inline-block;
+                border-radius: 50%;
+                border: 10px solid black;
+                padding:20px;
+               
+            }
+           .min ,  .hour
+           {
+               line-height: 45px;
+               position: relative;
+               transform-origin: bottom;
+           }
+           
+            .min
+            { 
+               
+                height:95px;
+                width:3px;
+                 left:90px;
+                background:#ff2600;
+                z-index: 2;
+                animation: sec 30s linear infinite;
+            }
+            .hour
+            {
+                height:95px;
+                width:5px;
+                 left:90px;
+                 bottom:95px;
+                background:#f9fd0a;
+              
+                z-index: 1;
+                animation:hours 120s linear infinite;
+            }
+            @keyframes sec{
+                from{transform: rotateZ(0deg);}
+                to{transform: rotateZ(360deg);}
+            }
+            @keyframes hours{
+                from{transform: rotateZ(0deg);}
+                to{transform: rotateZ(360deg);}
+            }
+           
+             
+            
+        </style>
+    </head>
+    <body>
+        <div class="clock">
+            <div class="min"></div>
+        <div class="hour"></div>
+    </div>
+    </body>
+</html>
