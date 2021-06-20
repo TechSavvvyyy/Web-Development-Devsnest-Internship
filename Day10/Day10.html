@@ -1,0 +1,174 @@
+<html>
+<head>
+<style>
+  
+.grid-container {
+
+  display:grid;
+  /* grid: 150px / auto auto auto; */
+  grid-auto-rows: 160px;
+  grid-auto-columns: 160px;
+  grid-template: 160px/auto auto auto auto ;
+  grid-gap: 2px;
+  background-color: #f39821;
+  padding: 2px;
+}
+
+.grid-container > div {
+  background-image: url("Eyn127pW8AQb66W.jpg");
+}
+.seats
+{
+    text-align: center;
+font-weight: 900;
+position: relative;
+right:150px;
+}
+.seats1
+{
+text-align: center;
+font-weight: 900;
+position: relative;
+left:150px;
+top:-57px;
+
+}
+#val1
+{
+    position:relative;
+    left:100px;
+    top: -50px;
+}
+#val2
+{
+    position: relative;
+   left: 370px;
+    top: -83px;
+}
+.moves{
+position: relative;
+width: 80px;
+height: 30px;
+text-align: center;
+top:50px;
+left :450px;
+border: 2px solid black;
+}
+.accuracy{
+width: 80px;
+height: 30px;
+text-align: center;
+  position: relative;
+top:15px;
+left :850px;  
+border: 2px solid black;
+
+}
+.mheading{
+  position: relative;
+  left: 460px;
+}
+.aheading{
+  position: relative;
+  left: 860px;
+  top:-32px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container"  style="background-color: black;" >
+  <div class="item1" onclick="myfu(this.getAttribute('class'));" ></div>
+  <div class="item2"  onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item3"  onclick="myfu(this.getAttribute('class'))";  ></div>  
+  <div class="item4"onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item5" onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item6" onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item7" onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item8"  onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item9"  onclick="myfu(this.getAttribute('class'))";  ></div>  
+  <div class="item10"  onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item11"  onclick="myfu(this.getAttribute('class'))";  ></div>
+  <div class="item12"  onclick="myfu(this.getAttribute('class'))";  ></div>
+</div>
+<div class ="moves">Moves</div>
+<div class ="accuracy">Accuracy</div>
+<p class ="mheading">Moves</p>
+<p class="aheading">Accuracy</p>
+<script>
+ var upl1=-1;
+ var upl2=-1;
+ var item = [ ];
+item[1]="url(\"1.jfif\")";
+item[6]="url(\"2.jfif\")";
+item[3]="url(\"3.jfif\")";
+item[4]="url(\"4.jfif\")";
+item[5]="url(\"5.jfif\")";
+item[7]="url(\"6.jfif\")";
+item[8]="url(\"3.jfif\")";
+item[10]="url(\"5.jfif\")";
+item[11]="url(\"4.jfif\")";
+item[12]="url(\"6.jfif\")";
+item[9]="url(\"1.jfif\")";
+item[2]="url(\"2.jfif\")";
+var acc=0;
+var moves=0;
+var crct=0;
+function myfu(classnamee){
+  element=document.getElementsByClassName(classnamee);
+  n=classnamee.slice(4)
+element[0].style.backgroundImage=item[n];
+
+ if (upl1 ==-1)
+  {
+ upl1=n;
+ }
+ else if (n!=upl1)
+ {
+   upl2=n;
+ }
+ if (upl1 != -1 && upl2 != -1)
+ {
+var  td = setTimeout(() => {console.log("h");} ,2000 );
+  if (item[upl1] == item[upl2])
+ {
+  class1="item"+upl1;
+ class2="item"+upl2;
+element1=document.getElementsByClassName(class1);
+element2=document.getElementsByClassName(class2);
+  crct+=1;
+  element1[0].style.backgroundImage = "url(\"white.png\")"
+  element2[0].style.backgroundImage = "url(\"white.png\")"
+  item[upl1]="url(\"white.png\")";
+  item[upl2]="url(\"white.png\")";
+  upl1=-1;
+  upl2=-1;
+
+  moves+=1;
+ }
+ else{
+   class1="item"+upl1;
+   class2="item"+upl2;
+   element1=document.getElementsByClassName(class1);
+   element2=document.getElementsByClassName(class2);
+   element1[0].style.backgroundImage= "url(\"Eyn127pW8AQb66W.jpg\")";
+   element2[0].style.backgroundImage= "url(\"Eyn127pW8AQb66W.jpg\")";
+  upl1=-1;
+  upl2=-1;
+  moves+=1;
+ }
+}
+
+ document.getElementsByClassName("moves")[0].innerHTML=moves;
+ if  (crct == 6){
+   acc=(6/moves)*100
+ }
+
+ document.getElementsByClassName("accuracy")[0].innerHTML=acc;
+
+}
+</script>
+</body>
+</html>
+
+
