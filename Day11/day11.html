@@ -1,0 +1,203 @@
+<html>
+<head>
+<title> Day11</title>
+   <style>
+    
+.ques{
+    height: 40px;
+    position : relative;
+    top: 150px;
+    left:150px;
+   
+    width:450px;
+    font-size: 30px;
+
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+}
+.a1{
+    height: 40px;
+    position : relative;
+    top: 170px;
+    left:150px;
+    font-size: 30px;
+    width:150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+.a2{
+    height: 40px;
+    position : relative;
+    top: 170px;
+    left:150px;
+    font-size: 30px;
+    width:150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 30px;
+    border: 2px solid black;
+}
+
+.a3{
+    height: 40px;
+    position : relative;
+    top: 170px;
+    left:150px;
+    font-size: 30px;
+    width:150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 30px;
+    border: 2px solid black;
+}
+.a4{
+    height: 40px;
+    position : relative;
+    top: 170px;
+    left:150px;
+    font-size: 30px;
+    width:150px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 2px solid black;
+    margin-top: 30px;
+}
+.next{
+    height: 60px;
+    position : relative;
+    top: 220px;
+    left:150px;
+    border: 2px solid black;
+    width:150px;
+    border-radius: 50%;
+    background-color: rgb(243, 24, 24);
+   color: rgb(236, 252, 17);
+   text-align:center;
+   size: 5px;
+   font-size: 38px;
+}
+.score{
+    height: 40px;
+    position : relative;
+    top: 200px;
+    left: 450px;
+    font-size: 30px;
+    width:150px;
+    
+    margin-top: 30px;
+}
+body {
+    background-image: url("image.jpg");
+  }
+  .fscore{
+ position: relative;
+ font-size: 40px;
+ left:200px;   
+ top: 100px;
+}
+   </style> 
+
+
+
+</head>
+<body>
+    <div class="ques" onclick="myfu(this.getAttribute('class'));" >Who are you ?</div>
+    <div class ="a1" onclick="myfu(this.getAttribute('class'));">Coder</div>
+    <div class ="a2"  onclick="myfu(this.getAttribute('class'));">Terrorist</div>
+    <div class ="a3" onclick="myfu(this.getAttribute('class'));">Support congress</div>
+    <div class ="a4" onclick="myfu(this.getAttribute('class'));">I am Fine</div>
+    <div class ="next" onclick="myf();">  Next</div>
+    <div class ="score"></div>
+    <div class = "fscore"></div>
+<script>
+var score =0;
+var qno=0;
+var crct="a1";
+class q {
+ z = [
+    // ["Who are you ?", "Coder" ,"Terrorist","Support congress" , "I am Fine ","a1"],
+    [ "How are you?", "Coder" ,"Terrorist","support congress" , "I am Fine " ,"a4"],
+    ["Complete this sentence \"chal ------\"","chai peene ", "be ", "hawa anne de","b....k","a4"]
+];
+}
+
+class quiz extends q{
+    constructor(selected){
+        super()
+        this.s = selected;
+    }
+    quizu=function(){
+        console.log(document.getElementsByClassName("ques")[0].innerHTML)
+        document.getElementsByClassName("ques")[0].innerHTML=this.z[qno][0];
+        document.getElementsByClassName("a1")[0].innerHTML=this.z[qno][1];
+        document.getElementsByClassName("a2")[0].innerHTML=this.z[qno][2];
+        document.getElementsByClassName("a3")[0].innerHTML=this.z[qno][3];
+        document.getElementsByClassName("a4")[0].innerHTML=this.z[qno][4];
+
+        crct=this.z[qno][5]
+        qno+=1;
+    }
+    check =function(){
+        console.log(crct , this.s)
+        if (crct == this.s)
+        {
+            return true
+        } 
+        else
+        {
+            return false
+        }
+       
+    }
+    scoreu=function(){
+
+        document.getElementsByClassName("score")[0].innerHTML= score;
+    }
+}
+var flag=0;
+function myf()
+{
+    var x = new quiz("none");
+    console.log(qno)
+    if (qno<2){
+    x.quizu();
+    
+    document.getElementsByClassName("a1")[0].style.backgroundColor="white";
+    document.getElementsByClassName("a2")[0].style.backgroundColor="white";
+    document.getElementsByClassName("a3")[0].style.backgroundColor="white";
+    document.getElementsByClassName("a4")[0].style.backgroundColor="white";
+    }
+    else{
+        document.getElementsByClassName("ques")[0].remove()
+        document.getElementsByClassName("a1")[0].remove()
+        document.getElementsByClassName("a2")[0].remove()
+        document.getElementsByClassName("a3")[0].remove()
+        document.getElementsByClassName("a4")[0].remove()
+        document.getElementsByClassName("next")[0].remove()
+        document.getElementsByClassName("fscore")[0].innerHTML="Congratulations your final score is ";  
+        x.scoreu()
+    }
+
+}
+function myfu(selected){
+var x = new quiz(selected);
+flag=1;
+   if (x.check() == true){
+    document.getElementsByClassName(selected)[0].style.backgroundColor="green";
+    ++score;
+ }
+ else{
+    document.getElementsByClassName(selected)[0].style.backgroundColor="red";
+ }
+
+ console.log("done");
+}
+</script>
+</body>
+</html>
+
+
+
