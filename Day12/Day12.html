@@ -1,0 +1,124 @@
+<html>
+<head>
+<title> Day12</title>
+   <style>
+body{
+    background-image: url("https://grantcardonetv.com/wp-content/uploads/todo_list.jpg");
+    background-size: cover;   
+}
+.tod{
+    height: 40px;
+    width : 280px;
+    position: relative;
+    top:30%;
+    left :52%;
+   
+    background-color :whitesmoke;
+   color:purple;
+}
+.but{
+    height:40px;
+    width: 60px;
+    position: relative;
+    top:30%;
+    left :52%;
+    border: hidden;
+    background-color :burlywood;
+   
+    
+}
+
+.but2{
+    height:40px;
+    width: 60px;
+    position: relative;
+    top:29%;
+    left :52%;
+    border: hidden;
+    background-color :burlywood;
+    
+}
+.but:hover{
+    background-color:crimson;
+    color: white;
+}
+.but2:hover{
+    background-color:crimson;
+    color: white;
+}
+.todl{
+    position: relative;
+    top:30%;
+    left :52%;
+    width:30%;
+    color:chartreuse;
+    font-weight: 900;
+    background-image: url(https://i.pinimg.com/736x/0e/f3/d1/0ef3d1c3ddb4991db19c9ee4ac57ca1d.jpg);
+    opacity: 0.6;
+}
+.but3:hover{
+    background-color: black;
+    color: blanchedalmond;
+}
+.but3{
+    height:38px;
+    width: 60px;
+    position: relative;
+    top:30%;
+    background-color: red;
+    color: white;
+    border: hidden;
+    left:15%;
+}
+
+ </style>
+<body>
+<input type ="text" class="tod"><button class ="but" onclick="myf()";  >ADD</button>
+<button class = "but2" ondblclick="showw()";>Todo List</button>
+<button class = "but3" onclick="del()" >Delete</button>
+<div class = "todl"></div>
+
+<script>
+   var p=[];
+    var n=0;
+    var ps=""
+    // document.getElementsByClassName("but").addEventListener("click", myf);
+    function del(){
+        localStorage.removeItem("p")
+        p=[]
+
+    }
+    
+    function myf(){
+        var x =document.getElementsByClassName("tod")[0].value;
+    p[n]=x;
+    n+=1;
+    ps=ps + x;
+    ps = ps + "<br>"
+    
+    console.log(ps)
+    const newt = document.createElement('div');
+    localStorage.setItem("p" , ps);
+    
+    // newt.innerHTML=x;
+     console.log( document.getElementsByClassName("todl"))
+     listt = document.getElementsByClassName("todl")
+      listt[0].appendChild(newt); 
+      
+    }
+    function showw()
+    {
+        todolist= localStorage.getItem("p")
+        
+        
+
+
+        listt = document.getElementsByClassName("todl");
+        listt[0].innerHTML=todolist;
+    }
+
+</script>
+</body>
+
+</head>
+</html>
