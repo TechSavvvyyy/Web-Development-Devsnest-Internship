@@ -1,0 +1,107 @@
+<html>
+<head>
+<style>
+.main{
+   background-image: url('covid-virus-agencies.jpg');
+   height :100%;
+   width: 100%;
+
+   background-size: cover;
+  
+}
+.input{
+   position: absolute;
+   top:40%;
+   left:50%;
+  opacity: 0.4;
+   width: 150px;
+
+}
+.new{
+   position: absolute;
+  bottom :30%;
+   left:50%;
+  background-color: rgb(238, 237, 237);
+  height:80px;
+  opacity: 0.9;
+   width: 150px;
+
+}
+.recover{
+
+   position: absolute;
+  bottom :30%;
+   left:20%;
+  background-color: rgba(248, 118, 12, 0.986);
+   height:80px;
+   opacity: 0.9;
+   width: 150px;
+
+
+}
+.death{
+ 
+   position: absolute;
+  bottom :30%;
+   left:80%;
+  background-color: rgb(35, 219, 18);
+  height:80px;
+  opacity: 0.9;
+   width: 150px;
+
+
+}
+.flag{
+   position: absolute;
+  top :50%;
+   left:15%;
+  background-color: rgb(16, 17, 16);
+  height:220px;
+  opacity: 0.7;
+   width: 80%;
+}
+.but{
+   position: absolute;
+   top:39%;
+   left:75%;
+  opacity: 0.7;
+   width: 50px;
+   height: 30px;
+   border-radius: 20%;
+ background-color: rgb(250, 6, 6);
+}
+</style>
+</head>
+<body>
+<div class = "main ">
+<input type = text class ="input"><button class ="but" onclick="myf();"></button></div>
+</div>
+<div class ="flag">
+<div class = "new">n</div>
+<div class = "death">d</div>
+<div class = "recover">r</div>
+</div>
+</body>
+<script>
+document.getElementsByClassName("input").value ="India"
+c ="India"
+function myf(){
+   c =  document.getElementsByClassName("input")[0].value
+   console.log(c)
+   getdata(c)
+  function getdata(c){
+  var a = fetch("https://disease.sh/v3/covid-19/countries/" + c )
+   .then((response ) => {
+      return response.json();
+   })
+   .then((data)=>{ document.getElementsByClassName("new")[0].innerHTML ="New CASES <br>"+  data.todayCases; 
+   document.getElementsByClassName("death")[0].innerHTML ="Death  CASES <br>"+  data.todayDeaths; 
+   document.getElementsByClassName("recover")[0].innerHTML ="Recover  CASES <br>"+  data.todayRecovered; console.log("hi");
+document.getElementsByClassName("flag")[0].style.backgroundImage ="url(\"" +data.countryInfo.flag +"\")"; 
+
+console.log("\"url(\"" +data.countryInfo.flag +"\")\"")  
+})
+
+}}
+</script>
+</html>
