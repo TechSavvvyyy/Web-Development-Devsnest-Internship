@@ -1,0 +1,61 @@
+.card{
+    width:200px;
+    height:200px;
+    position:relative;
+    top: 120px;
+    left: 200px;
+    border : 2px solid rgb(196, 236, 16);
+    background-color: rgb(31, 233, 240);
+    background-image: url("card.jpeg");
+    background-size :200px 200px;
+    background-repeat: no-repeat;
+}
+
+.name:hover{
+    opacity: 1;
+    left :170px;
+}
+.h:hover{
+    opacity:1;
+    left :200px;
+}
+.job:hover{
+    opacity: 1;
+    left :200px;
+}
+.name{
+    border : 2px solid black;
+    opacity: 0;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    position:relative;
+    left : 60px;
+    background-color: rgb(135, 9, 253);
+}
+.job{
+    border : 2px solid black;
+    display: inline-block;
+    opacity: 0;
+    width: 100px;
+    height: 50px;
+    position:relative;
+    left : 95px;
+    top: 5px;
+    background-color: rgb(135, 9, 253);
+  
+}
+.h{
+    border : 2px solid black;
+    display: inline-block;
+    opacity: 0;
+    width: 100px;
+    height: 50px;
+    position:relative;
+    left :90px;
+    top: 12px;
+    background-color: rgb(135, 9, 253);
+    
+}
+
+
