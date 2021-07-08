@@ -1,0 +1,47 @@
+.mainc{
+    background-image: url("bg1.jpg");
+    background-position: cover;
+}
+.container{
+    border: 2px solid wheat;
+    background-color: black;
+    width:60%;
+    height: 540px;
+    position :relative;
+    left:20%;
+
+   
+}
+.Box{
+    border-bottom: 1px solid rgba(233, 144, 10,0.2);
+    height:110px;
+}
+img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(201, 204, 5 ,0.4);
+    border-radius: 50%;
+}
+.Image{
+  
+    width: 70px;
+    height: 70px;
+ 
+   
+    position: relative;
+    top:10px;
+}
+.Name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem ;
+    color: whitesmoke;
+    position :relative;
+    left: 90px;
+    top:-60px;
+}
+.Chat{
+    color:rgba(250, 250, 250, 0.4);
+    position: relative;
+    top:-50px;
+    left: 100px;
+}
