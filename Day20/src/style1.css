@@ -1,0 +1,33 @@
+*{
+    margin : auto auto;
+    background: url('https://cdn.dribbble.com/users/32512/screenshots/4787574/light_ai_design_by_gleb.gif');
+    background-size: 1240px 550px;
+    color: blanchedalmond;
+}
+.Add{
+    position: relative;
+    top: -22px;
+    left : 110px;
+}
+
+.list{
+border: 2px solid rgb(103, 103, 235);
+box-shadow: 2px 2px 2px 2px rgb(110, 110, 209);
+padding :2px;
+margin : 12px;
+}
+.main{
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 30px;
+    left : 80px;
+    outline-width: 20px;
+    outline-color: rgba(241, 74, 74, 0.5);
+    outline-style: outset;
+    border : 2px solid black;
+    width: 200px;
+ 
+    padding :30px;
+    
+}
