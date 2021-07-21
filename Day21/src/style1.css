@@ -1,0 +1,86 @@
+/* *{
+    margin : auto auto;
+    background: url('https://cdn.dribbble.com/users/32512/screenshots/4787574/light_ai_design_by_gleb.gif');
+    background-size: 1240px 550px;
+    color: blanchedalmond;
+}
+.Add{
+    position: relative;
+    top: -22px;
+    left : 110px;
+}
+.a{
+    border: 2px solid yellow;
+}
+.list{
+border: 2px solid rgb(103, 103, 235);
+box-shadow: 2px 2px 2px 2px rgb(110, 110, 209);
+padding :2px;
+margin : 12px;
+}
+.main{
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 30px;
+    left : 80px;
+    outline-width: 20px;
+    outline-color: rgba(241, 74, 74, 0.5);
+    outline-style: outset;
+    border : 2px solid black;
+    width: 200px;
+ 
+    padding :30px;
+    
+} */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+  }
+  .item{
+      border: 2px solid rgb(253, 251, 251);
+  }
+  .cal {
+      border : 2px  solid rgb(247, 244, 244)
+  }
+  .App{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .App button{
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #0d6efd;
+    
+    border-radius: 5%;
+    box-shadow: 2px 2px rgb(202, 245, 10);
+    width: 23rem;
+  }
+  .App button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+
+  }
+  .App input{
+    padding: 6px;
+    margin: 10px;
+  }
+  .main{
+    margin-top: 30px;
+    border: 5px ridge rgba(236, 11, 11, 0.925);
+    padding: 20px;
+    padding-right: 40px;
+    box-shadow: 2px 2px 8px rgb(230, 129, 129);
+  }
+  .main button{
+    background-color: red;
+    margin-top: 10px;
+    width: 5rem;
+  }
