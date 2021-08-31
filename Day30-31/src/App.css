@@ -1,0 +1,179 @@
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  
+}
+.card{
+  /* border: 2px solid black; */
+  margin: 10px;
+  background: white;
+
+} 
+.card:hover{
+  box-shadow: 5px 5px 5px 5px black;
+}
+.four{
+  width:24%;
+  display: inline-block;
+  /* border:3px solid yellow; */
+  padding:3px;
+  background: coral;
+}
+.ui.cards{
+  /* width:40%; */
+  /* border:2px solid black; */
+  display: inline-block;
+  /* background-color: white; */
+}
+.ui.cards > .card > .image {
+  
+  height: 250px;
+  padding: 20px;
+  background: #fff;
+  margin: auto;
+}
+.ui.cards > .card > .image > img {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+
+
+.ui.cards > .card > .content > .header {
+  height: 55px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  font-size: 20px;
+  /* font-weight: bold; */
+  font-family: comic sans ms;
+  color: crimson;
+}
+.ui.cards > .card > .content > .description {
+  height: 36px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  font-family: comic sans ms;
+}
+.ui.cards > .card .meta.price {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  font-family: comic sans ms;
+}
+
+.ui.cards > .card .meta.price > a {
+  font-size: 1.3rem;
+  color: #222;
+  font-family: comic sans ms;
+}
+
+.ui.menu.fixed {
+  height: 60px;
+  /* padding-top: 15px; */
+
+}
+.ui.grid.container {
+  /* background: skyblue; */
+  display: inline-block;
+  /* margin-top: 10px; */
+  width:100%;
+  /* border: 2px solid black;  */
+  
+}
+h2{
+  color: purple;
+  font-family: comic sans ms;
+  font-size: 45px;
+  text-shadow: 5px 5px 5px white;
+  background: coral;
+}
+button{
+  display: inline-block;
+  position: relative;
+  left: 300px ;
+  top: -50px;
+  font-family: comic sans ms;
+    padding: 5px;
+    margin: 10px;
+    align-self: center;
+  border-radius: 4px;
+  background-color: #1ed4f4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.3rem;
+
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.pimage{
+  width:50%;
+  float: left;
+  width:400px;
+  height:400px;
+
+  margin:  50px 20px 30px 70px;
+ 
+  box-shadow:
+    rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+    border : 1px solid ;
+  border-radius: 10px;
+
+  border-color:
+    rgb(248, 246, 250)
+    rgb(248, 248, 248)
+    rgb(241, 239, 239);
+
+}
+.dtitle{
+  width: 45%;
+  float:right;
+  margin: 50px 20px 30px 20px;
+  text-decoration-style: double;
+}
+.dprice{
+  margin : 20px 20px 30px 20px;
+}
+.dcategory{
+  margin :  20px 20px 30px  00px;
+  font-size: 1.7rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+}
+.ddesc{
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+}
